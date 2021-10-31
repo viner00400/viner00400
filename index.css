@@ -15,4 +15,31 @@ body {
   width: 20vw;
   height: 28vh;
   object-fit: contain;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  animation-name: tukba;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes tukba {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 50%;
+    left: (100% - 20px);
+  }
+  50% {
+    top: 50%;
+    bottom: calc(100 - 300px);
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+  }
 }
