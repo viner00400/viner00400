@@ -11,7 +11,7 @@ body {
   background-size: cover;
   background-position: top;
 }
-#root img {
+#root > img {
   width: 20vw;
   height: 28vh;
   object-fit: contain;
@@ -36,6 +36,77 @@ body {
   50% {
     top: 50%;
     bottom: calc(100 - 300px);
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+.left-top {
+  position: absolute;
+  width: 20vw;
+  height: 28vw;
+  top: 0;
+  left: 0;
+}
+
+.left-top img {
+  position: absolute;
+  width: 20vw;
+  height: 27vw;
+  object-fit: contain;
+  animation-name: metla;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.right-bottom img {
+  position: absolute;
+  width: 20vw;
+  height: 28vw;
+  object-fit: contain;
+}
+
+.right-bottom {
+  position: absolute;
+  width: 33vw;
+  height: 33vw;
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes metla {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 50%;
+    left: calc(85% - 20px);
+  }
+  50% {
+    top: 50%;
+    bottom: calc(100% - 300px);
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+@keyframes lyna {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 50%;
+    left: calc(50% - 20px);
+  }
+  50% {
+    top: 50%;
+    bottom: calc(100% - 150px);
   }
 
   100% {
